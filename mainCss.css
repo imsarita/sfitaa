@@ -1,4 +1,3 @@
-
 .logo-thumbnail {
   width: 15rem;
 }
@@ -7,25 +6,36 @@
   font-size: 2rem !important;
 }
 
-#cartoonLong .modal-body,#iplLong .modal-body,#mobileLong .modal-body,#bigbangLong  .modal-body,
-#wordsearchLong  .modal-body,#antakLong  .modal-body,#gameLong  .modal-body{
+#cartoonLong .modal-body,
+#iplLong .modal-body,
+#mobileLong .modal-body,
+#bigbangLong .modal-body,
+#wordsearchLong .modal-body,
+#antakLong .modal-body,
+#gameLong .modal-body {
   height: 50rem;
 }
 
-
-.events{
-  background-color: #5F9EA0;
-  color:#ffffff !important;
+.bg-green,
+.bg-green:active,
+.bg-green:hover,
+.bg-green:focus,
+.bg-green:not(:disabled):not(.disabled).active:focus,
+.bg-green:not(:disabled):not(.disabled):active:focus,
+.show > .bg-green.dropdown-toggle:focus {
+  border-color: #5f9ea0;
+  background-color: #5f9ea0;
+  color: #ffffff !important;
 }
 
-.text-overflow-modal{
+.text-overflow-modal {
   width: 32vw;
   overflow: hidden;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.text-overflow-modal-left{
+.text-overflow-modal-left {
   /* width: 7rem; */
   overflow: hidden;
   white-space: nowrap;
@@ -79,13 +89,13 @@
     display: block;
   }
 }
-@media (min-screen:1024px){
+@media (min-screen: 1024px) {
   #creditsModal .modal-content {
-  width: fit-content;
-}
-#creditsModal .modal-body {
-  width: max-content;
-}
+    width: fit-content;
+  }
+  #creditsModal .modal-body {
+    width: max-content;
+  }
 }
 
 .blue {
