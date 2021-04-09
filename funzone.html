@@ -34,7 +34,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse align-self-end text-center" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse align-self-end " id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -105,7 +105,7 @@
                         <a class="dropdown-item" href="#">Fun Zone</a>
                         <!-- <a class="dropdown-item" href="#" target="_blank">Faculty Fundas</a>
                         <a class="dropdown-item" href="#" target="_blank">Council Chat</a> -->
-                        <!-- <a class="dropdown-item" href="#" target="_blank">Game Night</a> -->
+                        <a class="dropdown-item"   data-toggle="modal"data-target="#gameLong">Game Night</a>
                         <!-- <a class="dropdown-item" href="#">Prof Talk</a>
                         <a class="dropdown-item" href="#">Alums Unplugged</a> -->
                         <!-- <a class="dropdown-item" href="#" target="_blank">Cultural Event</a> -->
@@ -450,6 +450,32 @@
       </div>
     </div>
 
+
+
+
+    <!--Game Night-->
+    <div class="modal fade" id="gameLong" tabindex="-1" role="dialog" aria-labelledby="gameLong"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Game Night</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body m-2 embed-responsive embed-responsive-4by3">
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfVAO4tlD05iDJywM6B-0u8apknKdiqwI9AVWxnoaSiIgu6ow/viewform?embedded=true" width="640" height="2237" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
   </div>
 
   <footer class="bg-light">
@@ -485,7 +511,7 @@
         img_url = url.split('/embed/')[1];
   
         value = $(this).html();
-        pages = ["Fun Zone", "Professors Panel", "Student Council Chat", "Game Night", "Cultural Event"];
+        pages = ["Fun Zone", "Professors Panel", "Student Council Chat", "Cultural Event"];
         if (jQuery.inArray(value, pages) == -1) {
           console.log(value);
           $("#youtubeModal .modal-body").html('<iframe  src="' + url + '?rel=0&controls=1&autoplay=1&loop=1&showinfo=0&modestbranding=0"  class="embed-responsive-item youtube-iframe"  title="YouTube video player" loading="lazy"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
