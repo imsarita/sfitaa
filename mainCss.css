@@ -12,6 +12,7 @@
   height: 50rem;
 }
 
+
 .events{
   background-color: #5F9EA0;
   color:#ffffff !important;
@@ -98,3 +99,8 @@
 .green {
   color: #71c28d;
 }
+
+/****Remove logog from poly link***/
+/* a[href="./user/cwKZLZDA4q-"],a[href="./view/2kY1DrHn_1W"] {
+  display: none;
+} */
