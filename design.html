@@ -39,7 +39,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse align-self-end" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse align-self-end text-center" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -144,8 +144,8 @@
           </div>
           <div class="modal-body mx-auto embed-responsive embed-responsive-4by3">
           </div>
-          <div class="modal-footer">
-          </div>
+          <!-- <div class="modal-footer">
+          </div> -->
         </div>
       </div>
     </div>
@@ -266,7 +266,36 @@
       </div>
     </div>
 
+
+
+    
   </div>
+  
+  <!-- WelcomeModal -->
+<div class="modal fade bd-example-modal-lg" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title blue">Welcome to Rekindle’21 – Coalesce</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-auto blue px-5 text-justify">
+        <p>We would like to welcome you to our <b> Reunion 2021 </b>. Even though circumstances forced us to remain indoors, it didn’t deter our spirit to gather all our alumni together to celebrate our friendship and togetherness. Being true to our nature of playing with technology, we decided to take on the situation and go ahead to get a Virtual Reunion held.</p>
+        <p>Our foremost aim with the reunion is to create a platform for the Alumni to coalesce with our Alma Mater. Our alumni have spread out across the world and we thought it would be a great event to allow people from all over to virtually connect back with us.</p>
+        <p>The entire event has been organized by the students of SFIT under the guidance of the SFITAA. The model you will see is an actual model of the current college building. A lot of effort has been put into covering the details of the building, so feel free to rotate the model, zoom in, explore the classrooms, labs, elevator and the quadrangle. If you look carefully, you will even find the infamous canteen cat hidden away</em>.</p>
+        <p>We hope you enjoy the entire event, including the live events scheduled. In case your time zones are not matching, you can login later and view the recording of the event. Alumni for various batches and different corners of the globe have participated in this, so you may just find some long-lost friend in one of our events.</p>
+        <p class="text-center">Stay Safe and Have a Great Time!</p>
+      </div>
+      <!-- <div class="modal-footer">
+      </div> -->
+    </div>
+  </div>
+</div>
+
+
 
   <footer class="bg-light">
     <div class="d-flex justify-content-around flex-row flex-wrap">
@@ -285,49 +314,59 @@
     </div>
   </footer>
 
+
+
+
+
+
+
+
+
+
+  <script>
+    $(document).ready(function () {
+  
+      $("#welcomeModal").modal("show");
+      $("#funzoneModal .modal-body").load("forum/forum.html");
+      $("#creditsModal .modal-body").load("credits/credits.html");
+  
+      $(".dropdown-item").on("click", function (event) {
+        event.preventDefault();
+        url = $(this).attr("href");
+        img_url = url.split('/embed/')[1];
+  
+        value = $(this).html();
+        pages = ["Fun Zone", "Professors Panel", "Student Council Chat", "Game Night", "Cultural Event"];
+        if (jQuery.inArray(value, pages) == -1) {
+          console.log(value);
+          $("#youtubeModal .modal-body").html('<iframe  src="' + url + '?rel=0&controls=1&autoplay=1&loop=1&showinfo=0&modestbranding=0"  class="embed-responsive-item youtube-iframe"  title="YouTube video player" loading="lazy"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+          $("#youtubeModal .modal-title").html(value);
+          $('#youtubeModal').modal("show");
+        }
+        //commenting for fun zone page        
+          else {
+            window.open(url, '_blank');
+          }
+  
+      });
+  
+      // changes the iframe src to prevent playback or stop the video playback in our case
+      $("#youtubeModal .close").click(function () {
+        $('.youtube-iframe').each(function (index) {
+          $(this).attr('src', '');
+          return false;
+        });
+        $('#youtubeModal').hide();
+      });
+  
+    });
+  
+  </script>
 </body>
 
 
 
 
-<script>
-  $(document).ready(function () {
 
-
-    $("#funzoneModal .modal-body").load("forum/forum.html");
-    $("#creditsModal .modal-body").load("credits/credits.html");
-
-    $(".dropdown-item").on("click", function (event) {
-      event.preventDefault();
-      url = $(this).attr("href");
-      img_url = url.split('/embed/')[1];
-
-      value = $(this).html();
-      pages = ["Fun Zone", "Professors Panel", "Student Council Chat", "Game Night", "Cultural Event"];
-      if (jQuery.inArray(value, pages) == -1) {
-        console.log(value);
-        $("#youtubeModal .modal-body").html('<iframe  src="' + url + '?rel=0&controls=1&autoplay=1&loop=1&showinfo=0&modestbranding=0"  class="embed-responsive-item youtube-iframe"  title="YouTube video player" loading="lazy"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
-        $("#youtubeModal .modal-title").html(value);
-        $('#youtubeModal').modal("show");
-      }
-      //commenting for fun zone page        
-        else {
-          window.open(url, '_blank');
-        }
-
-    });
-
-    // changes the iframe src to prevent playback or stop the video playback in our case
-    $("#youtubeModal .close").click(function () {
-      $('.youtube-iframe').each(function (index) {
-        $(this).attr('src', '');
-        return false;
-      });
-      $('#youtubeModal').hide();
-    });
-
-  });
-
-</script>
 
 </html>
