@@ -105,8 +105,8 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
                         <a class="dropdown-item" href="#">Fun Zone</a>
-                        <!-- <a class="dropdown-item" href="#" target="_blank">Faculty Fundas</a>
-                        <a class="dropdown-item" href="#" target="_blank">Council Chat</a> -->
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/thoORzbhy0k" target="_blank">Faculty Fundas</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/embed/FY_UXlEQ08M" target="_blank">Council Chat</a>
                         <a class="dropdown-item"   data-toggle="modal"data-target="#gameLong">Game Night</a>
                         <a class="dropdown-item"    class="btn btn-transparent text-dark font-weight-bolder"  data-toggle="modal"
                         data-target="#eventsModal">Events Schedule</a>
@@ -564,10 +564,10 @@
         data-target="#creditsModal">
         Credits
       </button>
-      <button type="button" class="btn btn-transparent text-dark font-weight-bolder" data-toggle="modal"
+      <!-- <button type="button" class="btn btn-transparent text-dark font-weight-bolder" data-toggle="modal"
         data-target="#funzoneModal">
         Fan Board
-      </button>
+      </button> -->
     </div>
   </footer>
 
@@ -587,7 +587,7 @@
         img_url = url.split('/embed/')[1];
   
         value = $(this).html();
-        pages = ["Fun Zone", "Professors Panel", "Student Council Chat", "Cultural Event"];
+        pages = ["Fun Zone", "Professors Panel", "Student Council Chat", "Cultural Event" ,"Faculty Fundas" ,"Council Chat"];
         if (jQuery.inArray(value, pages) == -1) {
           console.log(value);
           $("#youtubeModal .modal-body").html('<iframe  src="' + url + '?rel=0&controls=1&autoplay=1&loop=1&showinfo=0&modestbranding=0"  class="embed-responsive-item youtube-iframe"  title="YouTube video player" loading="lazy"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
@@ -596,9 +596,9 @@
         }
 
 //commenting for fun zone page        
-        // else {
-        //   window.open(url, '_blank');
-        // }
+        else {
+          window.open(url, '_blank');
+        }
       });
   
       // changes the iframe src to prevent playback or stop the video playback in our case
