@@ -12,6 +12,11 @@
   height: 50rem;
 }
 
+.navbar-toggler,.events{
+  background-color: #5F9EA0;
+  color:#ffffff !important;
+}
+
 .text-overflow-modal{
   width: 32vw;
   overflow: hidden;
