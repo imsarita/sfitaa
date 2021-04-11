@@ -115,9 +115,9 @@
             <a class="dropdown-item" href="https://www.youtube.com/embed/FY_UXlEQ08M" target="_blank">Council Chat</a>
             <!-- <a class="dropdown-item"   data-toggle="modal"data-target="#gameLong" >Game Night</a> -->
             <a class="dropdown-item" href="https://www.youtube.com/embed/YkPLdQyEkVo">Prof Talk</a>
-            <a class="dropdown-item" href="https://www.youtube.com/embed/8CSgSYwg5jw"><p class="animate__animated animate__headShake mb-0 pb-0">Alums Unplugged <span style="color: #980202de;font-weight: bold;">&lt;New&gt;</span></p></a>
-            <a class="dropdown-item" href="https://www.youtube.com/embed/RL2rHrYr5yE"><p class="animate__animated animate__headShake mb-0 pb-0">Canteen Gossip<span style="color: #980202de;font-weight: bold;">&lt;New&gt;</span></p></a>
-            <!-- <a class="dropdown-item" href="#" target="_blank">Cultural Event</a> -->
+            <a class="dropdown-item" href="https://www.youtube.com/embed/8CSgSYwg5jw">Alums Unplugged</a>
+            <a class="dropdown-item" href="https://www.youtube.com/embed/RL2rHrYr5yE">Canteen Gossip</a>
+            <a class="dropdown-item" href="https://www.youtube.com/embed/RL2rHrYr5yE" target="_blank"><p class="animate__animated animate__headShake mb-0 pb-0">Cultural Event<span style="color: #980202de;font-weight: bold;">&lt;New&gt;</span></p></a>
 </div>
         </li>
 
@@ -433,8 +433,8 @@
         url = $(this).attr("href");
         img_url = url.split('/embed/')[1];
   
-        value = $(this).html();
-        pages = ["Fun Zone", "Professors Panel", "Student Council Chat", "Cultural Event" ,"Faculty Fundas" ,"Council Chat"];
+        value = $(this).text();
+        pages = ["Fun Zone", "Professors Panel", "Student Council Chat", "Cultural Event<New>" ,"Faculty Fundas" ,"Council Chat"];
         if (jQuery.inArray(value, pages) == -1) {
           console.log(value);
 
